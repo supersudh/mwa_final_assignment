@@ -1,0 +1,11 @@
+.header {
+    color: blue;
+}
+
+.custom-nav-ul {
+    display: flex;
+}
+
+.custom-nav-li {
+    margin: 0 1rem;
+}

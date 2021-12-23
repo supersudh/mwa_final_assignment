@@ -1,20 +1,21 @@
 import React from "react";
+import { Route, Routes } from "react-router-dom";
+import MainNavigation from "./components/Layout/MainNavigation";
+import HomePage from "./pages/Home";
+import NewPage from "./pages/NewPage";
+import NewSecondPage from "./pages/NewSecondPage";
 
-import Todo from "./components/Todo"
+
 
 function App() {
   return (
     <div>
-      <h1>My Todo List</h1>
-     
-      <Todo text="Go grocery shopping" />
-      <br />
-      <Todo text="Eat ice cream"/>
-      <br />
-      <Todo text="Finish React Assignment"/>
-
-
-
+      <MainNavigation />
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+        <Route path="/new-page" element={<NewPage />}></Route>
+        <Route path="/new-second-page" element={<NewSecondPage />}></Route>
+      </Routes>
     </div>
   );
 }
